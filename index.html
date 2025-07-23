@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>118st Punjabi PM Community</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>118st Punjabi PM Community</h1>
+
+    <div class="contractor-card">
+      <div class="photo-frame">
+        <img src="person1.jpg" alt="Rajdeep Kaur">
+      </div>
+      <div class="info">
+        <h2>Rajdeep Kaur</h2>
+        <p>Experienced project coordinator for AV/IT jobs with fluency in Punjabi, Hindi, and English.</p>
+        <a href="#contact-form" class="contact-link" data-name="Rajdeep Kaur">Get in Touch</a>
+      </div>
+    </div>
+
+    <div class="contractor-card">
+      <div class="photo-frame">
+        <img src="person2.jpg" alt="Gurpreet Singh">
+      </div>
+      <div class="info">
+        <h2>Gurpreet Singh</h2>
+        <p>Remote IT support and document translator. Specializes in Punjabi to English communication.</p>
+        <a href="#contact-form" class="contact-link" data-name="Gurpreet Singh">Get in Touch</a>
+      </div>
+    </div>
+
+    <!-- Contact Form -->
+    <div id="contact-form" class="form-section">
+      <h2>Contact a Project Manager</h2>
+      <form id="pmForm">
+        <label for="pm">Select PM:</label>
+        <select id="pm" name="pm" required>
+          <option value="">-- Choose a PM --</option>
+          <option value="Rajdeep Kaur">Rajdeep Kaur</option>
+          <option value="Gurpreet Singh">Gurpreet Singh</option>
+        </select>
+
+        <label for="name">Your Name:</label>
+        <input type="text" id="name" name="name" required>
+
+        <label for="email">Your Email:</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="details">Work Details:</label>
+        <textarea id="details" name="details" rows="4" required></textarea>
+
+        <button type="submit">Submit</button>
+        <p id="confirmation" class="hidden">We have forwarded your request to your chosen PM. They will reach out to you shortly.</p>
+      </form>
+    </div>
+  </div>
+
+  <script>
+    // Auto-select PM when 'Get in Touch' is clicked
+    document.querySelectorAll('.contact-link').forEach(link => {
+      link.addEventListener('click', e => {
+        const name = e.target.getAttribute('data-name');
+        document.getElementById('pm').value = name;
+      });
+    });
+
+    // Handle form submission
+    document.getElementById('pmForm').addEventListener('submit', e => {
+      e.preventDefault();
+      document.getElementById('confirmation').classList.remove('hidden');
+      e.target.reset();
+    });
+  </script>
+</body>
+</html>
