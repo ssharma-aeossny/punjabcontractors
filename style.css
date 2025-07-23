@@ -1,0 +1,112 @@
+body {
+  font-family: Arial, sans-serif;
+  background: #f4f4f4;
+  margin: 0;
+  padding: 20px;
+}
+
+.container {
+  max-width: 800px;
+  margin: auto;
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+}
+
+h1, h2 {
+  text-align: center;
+  color: #333;
+}
+
+.contractor-card {
+  display: flex;
+  background: #fafafa;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  margin-bottom: 20px;
+  padding: 15px;
+  align-items: center;
+}
+
+.photo-frame {
+  flex: 0 0 100px;
+  height: 100px;
+  margin-right: 20px;
+}
+
+.photo-frame img {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+}
+
+.info h2 {
+  margin: 0 0 10px;
+  color: #222;
+}
+
+.info p {
+  margin: 4px 0;
+  color: #444;
+}
+
+.contact-link {
+  display: inline-block;
+  margin-top: 10px;
+  color: #007BFF;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.contact-link:hover {
+  text-decoration: underline;
+}
+
+.form-section {
+  background: #f9f9f9;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  padding: 20px;
+  margin-top: 40px;
+}
+
+form label {
+  display: block;
+  margin-top: 15px;
+  font-weight: bold;
+}
+
+form input, form select, form textarea {
+  width: 100%;
+  padding: 8px;
+  margin-top: 5px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+
+form button {
+  margin-top: 20px;
+  padding: 10px 20px;
+  background: #007BFF;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+form button:hover {
+  background: #0056b3;
+}
+
+#confirmation {
+  margin-top: 15px;
+  color: green;
+  font-weight: bold;
+}
+
+.hidden {
+  display: none;
+}
